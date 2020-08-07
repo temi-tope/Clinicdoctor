@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-button color="light" slot="start" (click)="dismissDetails()">X</ion-button>
+    <ion-title>
+      Prescription
+    </ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-row style="border-bottom: groove; background-color:rgb(224, 213, 252);">
+    <ion-col col-4>
+    <ion-label >Drug</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >Dosage</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >Date</ion-label>
+  </ion-col>
+</ion-row>
+
+<ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+    <ion-label >{{prescription?.name}}</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >{{prescription?.dosage}}</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >{{prescription?.date}}</ion-label>
+  </ion-col>
+</ion-row>
+
+</ion-content>

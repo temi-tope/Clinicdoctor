@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-button color="light" (click)="dismissRegister()">X</ion-button>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <form #form="ngForm" (ngSubmit)="register(form)" method="post">
+    <ion-toolbar>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">First Name</ion-label>   
+            <ion-input ngModel name="fName" required></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input ngModel name="lName" required></ion-input>
+        </ion-item>
+        </ion-col>
+      </ion-row>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label>Gender</ion-label>
+          <ion-select ngModel name="sex" required>
+            <ion-select-option disabled>Choose one</ion-select-option>
+            <ion-select-option value="Male">Male</ion-select-option>
+            <ion-select-option value="Female">Female</ion-select-option>
+        </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Date of Birth</ion-label>
+        <ion-datetime ngModel name="dob" displayFormat="MM/DD/YYYY"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Workpalce</ion-label>
+        <ion-input ngModel name="workplace" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Licence Number</ion-label>
+        <ion-input type="number" ngModel name="licence_no" required></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label position="floating">Specialization</ion-label>
+        <ion-input ngModel name="specialization" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Address</ion-label>
+        <ion-input ngModel name="address" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input ngModel name="username" required></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" ngModel name="password" required></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-toolbar>
+
+<ion-toolbar>
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" expand="full" [disabled]="!form.valid" color="danger">Register</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-toolbar>
+  </form>
+</ion-content>

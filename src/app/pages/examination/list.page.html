@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Examination
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="sendExam(form)" method="post">
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">
+          Write down your examination report here</ion-label>
+        <ion-textarea
+          ngModel
+          name="exam"
+          rows="6"
+          cols="20"
+          maxlength="750"
+        ></ion-textarea>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <div *ngIf="!exam && sessionId">
+<ion-list style="text-align:center">
+<ion-button type="submit"  color="primary">Submit and Prescribe</ion-button>
+</ion-list>
+  </div>
+</form>
+</ion-content>

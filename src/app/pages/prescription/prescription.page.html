@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Prescription
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <img src="/assets/shapes.svg" alt=""/>
+    <ion-card-header>
+      <ion-card-subtitle>{{patient?.name}}</ion-card-subtitle>
+      <ion-card-title>Complain</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h3>
+        {{complain?.complain}}
+      </h3>
+    </ion-card-content>
+  </ion-card>
+  <form #form="ngForm" (ngSubmit)="sendPresc(form)" method="post">
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">Name of Drug</ion-label>
+        <ion-input ngModel name="name" maxlength="50" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">
+          Write down the dosage here</ion-label>
+        <ion-textarea
+          ngModel
+          name="dosage"
+          rows="6"
+          cols="20"
+          maxlength="100"
+          required
+        ></ion-textarea>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+<ion-list style="text-align:center">
+<ion-button type="submit" [disabled]="!form.valid" color="primary">Prescribe</ion-button>
+</ion-list>
+</form>
+</ion-content>

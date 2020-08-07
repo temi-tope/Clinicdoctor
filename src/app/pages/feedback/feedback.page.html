@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Patient Feedback
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <img src="/assets/shapes.svg" alt=""/>
+    <ion-card-header>
+      <ion-card-subtitle>{{patient?.name}}</ion-card-subtitle>
+      <ion-card-title>Feedback</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    <div *ngIf="feedback == undefined">
+      <p>
+        <b>No feedback has been given</b>
+      </p>
+    </div>
+  </ion-card-content>
+  </ion-card>
+
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label><h1>Details</h1></ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-icon slot="start" color="medium" name="person"></ion-icon>
+      <ion-label><b></b>{{feedback?.feedDetails}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" color="medium" name="female"></ion-icon>
+      <ion-label><b>{{feedbacktype}}</b></ion-label>
+    </ion-item>
+</ion-list>
+<div *ngIf="feedback != undefined && feedbacktype === 'Satisfied'">
+  <ion-list style="text-align:center">
+<ion-button type="submit"  color="primary" expand="full" (click)="updateStatus()">End Service</ion-button>
+</ion-list>
+</div>
+
+<div *ngIf="feedback != undefined && feedbacktype !== 'Satisfied'">
+  <ion-list style="text-align:center">
+<ion-button type="submit"  color="primary" expand="full" (click)="reExamin()">Re-examin</ion-button>
+</ion-list>
+</div>
+</ion-content>

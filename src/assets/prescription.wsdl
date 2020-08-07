@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions targetNamespace="http://main.prescription.com/" name="PrescriptionService" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://main.prescription.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+
+<wsdl:types>
+
+
+<xs:schema targetNamespace="http://main.prescription.com/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://main.prescription.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="addDoctor" type="tns:addDoctor"/>
+
+<xs:element name="addDoctorResponse" type="tns:addDoctorResponse"/>
+
+<xs:element name="addPatient" type="tns:addPatient"/>
+
+<xs:element name="addPatientResponse" type="tns:addPatientResponse"/>
+
+<xs:element name="assign" type="tns:assign"/>
+
+<xs:element name="assignResponse" type="tns:assignResponse"/>
+
+<xs:element name="exam" type="tns:exam"/>
+
+<xs:element name="examResponse" type="tns:examResponse"/>
+
+<xs:element name="getComplain" type="tns:getComplain"/>
+
+<xs:element name="getComplainResponse" type="tns:getComplainResponse"/>
+
+<xs:element name="getFeedback" type="tns:getFeedback"/>
+
+<xs:element name="getFeedbackResponse" type="tns:getFeedbackResponse"/>
+
+<xs:element name="getPresc" type="tns:getPresc"/>
+
+<xs:element name="getPrescResponse" type="tns:getPrescResponse"/>
+
+<xs:element name="login" type="tns:login"/>
+
+<xs:element name="loginResponse" type="tns:loginResponse"/>
+
+<xs:element name="sendFeedback" type="tns:sendFeedback"/>
+
+<xs:element name="sendFeedbackResponse" type="tns:sendFeedbackResponse"/>
+
+<xs:element name="sendPresc" type="tns:sendPresc"/>
+
+<xs:element name="sendPrescResponse" type="tns:sendPrescResponse"/>
+
+<xs:element name="setComplain" type="tns:setComplain"/>
+
+<xs:element name="setComplainResponse" type="tns:setComplainResponse"/>
+
+
+<xs:complexType name="assign">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="assignResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="sendFeedback">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="sendFeedbackResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="login">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="loginResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:anyType" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="setComplain">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="setComplainResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="getFeedback">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="getFeedbackResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="sendPresc">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="sendPrescResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="addDoctor">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="addDoctorResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="addPatient">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="addPatientResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="exam">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="examResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="getComplain">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="getComplainResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:anyType" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="getPresc">
+
+
+<xs:sequence>
+
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="getPrescResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:schema>
+
+</wsdl:types>
+
+
+<wsdl:message name="sendFeedback">
+
+<wsdl:part name="parameters" element="tns:sendFeedback"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="getFeedbackResponse">
+
+<wsdl:part name="parameters" element="tns:getFeedbackResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="login">
+
+<wsdl:part name="parameters" element="tns:login"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="getFeedback">
+
+<wsdl:part name="parameters" element="tns:getFeedback"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="addPatientResponse">
+
+<wsdl:part name="parameters" element="tns:addPatientResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="sendPresc">
+
+<wsdl:part name="parameters" element="tns:sendPresc"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="addDoctor">
+
+<wsdl:part name="parameters" element="tns:addDoctor"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="loginResponse">
+
+<wsdl:part name="parameters" element="tns:loginResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="getComplain">
+
+<wsdl:part name="parameters" element="tns:getComplain"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="getPresc">
+
+<wsdl:part name="parameters" element="tns:getPresc"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="assign">
+
+<wsdl:part name="parameters" element="tns:assign"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="setComplain">
+
+<wsdl:part name="parameters" element="tns:setComplain"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="addDoctorResponse">
+
+<wsdl:part name="parameters" element="tns:addDoctorResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="sendFeedbackResponse">
+
+<wsdl:part name="parameters" element="tns:sendFeedbackResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="setComplainResponse">
+
+<wsdl:part name="parameters" element="tns:setComplainResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="sendPrescResponse">
+
+<wsdl:part name="parameters" element="tns:sendPrescResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="getComplainResponse">
+
+<wsdl:part name="parameters" element="tns:getComplainResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="assignResponse">
+
+<wsdl:part name="parameters" element="tns:assignResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="addPatient">
+
+<wsdl:part name="parameters" element="tns:addPatient"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="examResponse">
+
+<wsdl:part name="parameters" element="tns:examResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="exam">
+
+<wsdl:part name="parameters" element="tns:exam"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="getPrescResponse">
+
+<wsdl:part name="parameters" element="tns:getPrescResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:portType name="IPrescription">
+
+
+<wsdl:operation name="assign">
+
+<wsdl:input name="assign" message="tns:assign"> </wsdl:input>
+
+<wsdl:output name="assignResponse" message="tns:assignResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="sendFeedback">
+
+<wsdl:input name="sendFeedback" message="tns:sendFeedback"> </wsdl:input>
+
+<wsdl:output name="sendFeedbackResponse" message="tns:sendFeedbackResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="login">
+
+<wsdl:input name="login" message="tns:login"> </wsdl:input>
+
+<wsdl:output name="loginResponse" message="tns:loginResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="setComplain">
+
+<wsdl:input name="setComplain" message="tns:setComplain"> </wsdl:input>
+
+<wsdl:output name="setComplainResponse" message="tns:setComplainResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="getFeedback">
+
+<wsdl:input name="getFeedback" message="tns:getFeedback"> </wsdl:input>
+
+<wsdl:output name="getFeedbackResponse" message="tns:getFeedbackResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="sendPresc">
+
+<wsdl:input name="sendPresc" message="tns:sendPresc"> </wsdl:input>
+
+<wsdl:output name="sendPrescResponse" message="tns:sendPrescResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="addDoctor">
+
+<wsdl:input name="addDoctor" message="tns:addDoctor"> </wsdl:input>
+
+<wsdl:output name="addDoctorResponse" message="tns:addDoctorResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="addPatient">
+
+<wsdl:input name="addPatient" message="tns:addPatient"> </wsdl:input>
+
+<wsdl:output name="addPatientResponse" message="tns:addPatientResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="exam">
+
+<wsdl:input name="exam" message="tns:exam"> </wsdl:input>
+
+<wsdl:output name="examResponse" message="tns:examResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="getComplain">
+
+<wsdl:input name="getComplain" message="tns:getComplain"> </wsdl:input>
+
+<wsdl:output name="getComplainResponse" message="tns:getComplainResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="getPresc">
+
+<wsdl:input name="getPresc" message="tns:getPresc"> </wsdl:input>
+
+<wsdl:output name="getPrescResponse" message="tns:getPrescResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:binding name="PrescriptionServiceSoapBinding" type="tns:IPrescription">
+
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+
+
+<wsdl:operation name="assign">
+
+<soap12:operation style="document" soapAction="urn:Assign"/>
+
+
+<wsdl:input name="assign">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="assignResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="sendFeedback">
+
+<soap12:operation style="document" soapAction="urn:SendFeedback"/>
+
+
+<wsdl:input name="sendFeedback">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="sendFeedbackResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="login">
+
+<soap12:operation style="document" soapAction="urn:Login"/>
+
+
+<wsdl:input name="login">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="loginResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="setComplain">
+
+<soap12:operation style="document" soapAction="urn:SetComplain"/>
+
+
+<wsdl:input name="setComplain">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="setComplainResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="getFeedback">
+
+<soap12:operation style="document" soapAction="urn:GetFeedback"/>
+
+
+<wsdl:input name="getFeedback">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="getFeedbackResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="sendPresc">
+
+<soap12:operation style="document" soapAction="urn:SendPresc"/>
+
+
+<wsdl:input name="sendPresc">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="sendPrescResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="addDoctor">
+
+<soap12:operation style="document" soapAction="urn:AddDoctor"/>
+
+
+<wsdl:input name="addDoctor">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="addDoctorResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="addPatient">
+
+<soap12:operation style="document" soapAction="urn:AddPatient"/>
+
+
+<wsdl:input name="addPatient">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="addPatientResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="exam">
+
+<soap12:operation style="document" soapAction="urn:Exam"/>
+
+
+<wsdl:input name="exam">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="examResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="getComplain">
+
+<soap12:operation style="document" soapAction="urn:GetComplain"/>
+
+
+<wsdl:input name="getComplain">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="getComplainResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+
+<wsdl:operation name="getPresc">
+
+<soap12:operation style="document" soapAction="urn:GetPresc"/>
+
+
+<wsdl:input name="getPresc">
+
+<soap12:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="getPrescResponse">
+
+<soap12:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:service name="PrescriptionService">
+
+
+<wsdl:port name="PrescriptionPort" binding="tns:PrescriptionServiceSoapBinding">
+
+<soap12:address location="http://localhost:8080/Prescription/services/PrescriptionPort?wsdl"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>
