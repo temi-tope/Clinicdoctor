@@ -25,11 +25,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardPageModule),
     // canActivate: [AuthGuard]
   },
-  // {
-  //   path: 'home',
-  //   loadChildren: () => import('./pages/AssignedPatient/home.module').then(m => m.HomePageModule),
-  // // canActivate: [AuthGuard]
-  // },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/AssignedPatient/home.module').then(m => m.HomePageModule),
+  // canActivate: [AuthGuard]
+  },
   {
     path: 'list',
     loadChildren: () => import('./pages/examination/list.module').then(m => m.ListPageModule),
