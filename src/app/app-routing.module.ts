@@ -25,11 +25,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardPageModule),
     // canActivate: [AuthGuard]
   },
-  {
-    path: 'home',
-    loadChildren: () => import('./pages/AssignedPatient/home.module').then(m => m.HomePageModule),
-  // canActivate: [AuthGuard]
-  },
+  // {
+  //   path: 'home',
+  //   loadChildren: () => import('./pages/AssignedPatient/home.module').then(m => m.HomePageModule),
+  // // canActivate: [AuthGuard]
+  // },
   {
     path: 'list',
     loadChildren: () => import('./pages/examination/list.module').then(m => m.ListPageModule),
@@ -37,21 +37,21 @@ const routes: Routes = [
   },
   {
     path: 'prescription',
-    loadChildren: () => import('./pages/prescription/prescription.module').then(m => m.PrescriptionPageModule)
+    loadChildren: () => import('./pages/prescription/prescription.module').then(m => m.PrescriptionPageModule),
      // canActivate: [AuthGuard]
   },
   {
     path: 'feedback',
-    loadChildren: () => import('./pages/feedback/feedback.module').then(m => m.FeedbackPageModule)
+    loadChildren: () => import('./pages/feedback/feedback.module').then(m => m.FeedbackPageModule),
      // canActivate: [AuthGuard]
   },
   {
     path: 'details/:id',
-    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule)
+    loadChildren: () => import('./pages/details/details.module').then( m => m.DetailsPageModule),
   },
   {
     path: 'reexam',
-    loadChildren: () => import('./pages/reexam/reexam.module').then( m => m.ReexamPageModule)
+    loadChildren: () => import('./pages/reexam/reexam.module').then( m => m.ReexamPageModule),
   },
 
 ];
