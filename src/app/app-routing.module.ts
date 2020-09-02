@@ -33,7 +33,7 @@ const routes: Routes = [
 
   {
     path: 'home',
-    loadChildren: () => import("./pages/AssignedPatient/home.module").then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/assignedPatient/home.module').then(m => m.HomePageModule)
   // canActivate: [AuthGuard]
   },
 
