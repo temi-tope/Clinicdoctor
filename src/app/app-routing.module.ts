@@ -27,12 +27,12 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/AssignedPatient/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/AssignedPatient/home.module').then(m => m.HomePageModule),
   // canActivate: [AuthGuard]
   },
   {
     path: 'list',
-    loadChildren: () => import('./pages/examination/list.module').then(m => m.ListPageModule)
+    loadChildren: () => import('./pages/examination/list.module').then(m => m.ListPageModule),
      // canActivate: [AuthGuard]
   },
   {
