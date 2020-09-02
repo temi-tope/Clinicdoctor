@@ -26,17 +26,15 @@ const routes: Routes = [
     // canActivate: [AuthGuard]
   },
   {
+    path: 'home',
+    loadChildren: () => import("./pages/AssignedPatient/home.module").then(m => m.HomePageModule)
+  // canActivate: [AuthGuard]
+  },
+  {
     path: 'list',
     loadChildren: () => import('./pages/examination/list.module').then(m => m.ListPageModule)
      // canActivate: [AuthGuard]
   },
-
-  {
-    path: 'home',
-    loadChildren: () => import("./pages/AssignedPatient/home.module.ts").then(m => m.HomePageModule)
-  // canActivate: [AuthGuard]
-  },
-
   {
     path: 'prescription',
     loadChildren: () => import('./pages/prescription/prescription.module').then(m => m.PrescriptionPageModule)
